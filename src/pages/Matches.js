@@ -7,7 +7,6 @@ import { MessageButton } from "../components/Button";
 import "../components/MatchCards/images/small-profile-pic-one.png";
 import Map from "../components/map";
 import UserContext from "../utils/UserContext";
-import API from "../utils/API";
 
 
 function Matches() {
@@ -24,7 +23,7 @@ useEffect(()=>{
     setFinalUser(userForMatchesPage)
     console.log("I have loaded", finalUser)
   }
-},[isLoading , userForMatchesPage.length]
+},[isLoading , userForMatchesPage.length , finalUser, userForMatchesPage]
 )
   if(isLoading){
     return (

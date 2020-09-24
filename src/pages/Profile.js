@@ -51,26 +51,26 @@ let Profile = (props) => {
                     <Col size="md-12">
                         <Card petName={user.petName} petPhotoUrl={user.petPhotoUrl} messageTwo={"Dog Pic"} message = {"My Pic"} img1 = {user.petPhotoUrl} img2={user.userPhotoUrl} >
                             <div style={{float:"left" , width:"50%" }}>
-                            <div style={{ marginLeft: "5%" , fontSize:"25px" }}>Pet name: &nbsp;&nbsp;{user.petName}</div>
-                            <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Breed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.breed}</div>
-                            <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
+                            <div style={{marginTop:"5%", marginLeft: "5%" , fontSize:"25px" }}>Pet name: &nbsp;&nbsp;{user.petName}</div>
+                            <div style={{ paddingTop: "7%", marginLeft: "5%" , fontSize:"25px" }}>Breed: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.breed}</div>
+                            <div style={{ paddingTop: "7%", marginLeft: "5%" , fontSize:"25px" }}>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{user.age}</div>
                             </div>
                             <div style={{float: "left" ,width:"50%" }}>
-                            <div style={{ marginLeft: "5%" , fontSize:"25px"  }}>Vaccinated: {vaccinated}</div>
-                            <div style={{ marginTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
-                            <div style={{ paddingTop: "2.5%", marginLeft: "5%" , fontSize:"25px" }}>Interests: &nbsp;{interests}</div>
+                            <div style={{marginTop:"12%", marginLeft: "5%" , fontSize:"25px"  }}>Vaccinated: {vaccinated}</div>
+                            <div style={{ marginTop: "12%", marginLeft: "5%" , fontSize:"25px" }}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
                             </div>
                         </Card>
                     </Col>
                 </Row-fluid>
                 <Row>
                     <Col size="md-11">
-                        <ProfDetails callbackStuff={setClicked}>
+                        <ProfDetails callbackStuff={setClicked} marginTop="5%" >
                             <div style={{ paddingTop: "2%" , marginLeft: "2.5%" }}>User Name : {user.userName} </div>
                             <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }} >Location: &nbsp;&nbsp;&nbsp;&nbsp;{user.city}</div>
                             <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }}>Zip Code: &nbsp;&nbsp;&nbsp;&nbsp;{user.zipCode} </div>
-                            <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }}>Join Date: &nbsp;&nbsp;&nbsp;{readableDate}</div>
+                            <div style={{ paddingTop: "4%", marginLeft: "2.5%"}}>Interests: &nbsp;{interests}</div>
                             <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }}>More about my pet: &nbsp;&nbsp;{user.info}</div>
+                            <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }}>Join Date: &nbsp;&nbsp;&nbsp;{readableDate}</div>
                             {/* <div style={{paddingTop: "3%"}}>About my pet: &nbsp;{interests}</div> */}
                             <EditProfileButton />
                         </ProfDetails>

@@ -31,11 +31,11 @@ export function ModalButton(props) {
     );
 };
 export function XButton(props) {
-    console.log(props)
+    console.log(props.onClick)
     return ( 
         <button
-            className="LoginModalButton"
-            onClick={props.onClick}
+            className="XButton"
+            onClick={props.onClickOne}
             style={props}>
             X
         </button>
@@ -52,6 +52,7 @@ export function LoginButton(props) {
     );
 }
 export function LoginModalButton(props) {
+    console.log(props)
     return ( 
         <button
             className="LoginModalButton topright" {...props}
@@ -190,7 +191,7 @@ export function LogOutButton() {
 
     useEffect(
         ()=>{localStorage.setItem('user', JSON.stringify(user));
-      }, [])
+      }, [user])
 
     function handleClick() {
         getData("")

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import Col from "../Col";
-import Profile from "../../pages/Profile";
 import "./style.css";
 
 
 function Card(props) {
-  const [petPhoto , setPetPhoto] = useState()
   const [userPhoto , setUserPhoto] = useState()
   const [userPhotoLoaded, setUserPhotoLoaded] = useState(false)
   const [petPhotoLoaded, setPetPhotoLoaded] = useState(true)
@@ -18,7 +16,6 @@ function Card(props) {
       )
     } else{
       setUserPhoto(props.img2)
-      setPetPhoto(props.img1)
       setUserPhotoLoaded(true)
       setPetPhotoLoaded(false)
       console.log(props.img2)
@@ -29,7 +26,6 @@ function Card(props) {
       setPetPhotoLoaded(true)
     }
   }
-
   if(petPhotoLoaded === true){
     return (
       <Col size="md-6">
