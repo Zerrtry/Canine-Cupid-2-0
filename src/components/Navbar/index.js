@@ -1,6 +1,6 @@
-import React, { Children } from "react"
+import React from "react"
 import "./style.css";
-import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton , AboutUsButton , HomeButton, SignupButton } from "../Button"
+import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton, AboutUsButton, HomeButton, SignupButton } from "../Button"
 
 
 
@@ -8,10 +8,10 @@ export function Navbar(props) {
   console.log(props.color)
   return (
     <div className="navbar">
-    <MyProfileButton />
-    <MatchNowButton/>
-    <MatchesButton/>
-    <LogOutButton/>
+      <MyProfileButton />
+      <MatchNowButton />
+      <MatchesButton />
+      <LogOutButton />
     </div>
   );
 }
@@ -20,12 +20,12 @@ export function NavbarNolinks(props) {
   console.log(props)
   return (
     <div className="navbar-login">
-        <SignupButton />
-        <button className="nav-bar-login"
+      <SignupButton />
+      <button className="nav-bar-login"
         onClick={props.children.props.onClick}
-        > Log In
+      > Log In
         </button>
-        <AboutUsButton />
+      <AboutUsButton />
     </div>
   );
 }
@@ -35,7 +35,7 @@ export function NavbarAboutUs(props) {
   return (
     <div className="navbar-login">
       <HomeButton
-      {...props} 
+        {...props}
       />
     </div>
   );
@@ -45,7 +45,7 @@ export function NavbarSignUp(props) {
   return (
     <div className="navbar-signup">
       <HomeButton
-      {...props} 
+        {...props}
       />
     </div>
   );

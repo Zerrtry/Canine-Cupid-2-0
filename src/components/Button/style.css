@@ -50,13 +50,24 @@
     width: 140px;
     border: 1px solid black;
     float: right;
-    margin-top: 6%;
+    margin-top: 5%;
     font-size: 20px;
     font-weight: bold;
     background-color:rgb(232, 86, 86);
 }
-
-
+.XButton{
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap
+}
 .LoginModalButton{
         border: none;
         display: inline-block;

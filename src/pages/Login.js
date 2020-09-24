@@ -6,7 +6,7 @@ import UserContext from "../utils/UserContext";
 import { Col, Row, Container } from "../components/Grid";
 import { Input } from "../components/Form";
 import { LoginButton } from "../components/Button";
-import { ModalButton, LoginModalButton, XButton } from "../components/Button";
+import { ModalButton} from "../components/Button";
 import {NavbarNolinks} from '../components/Navbar';
 import Header from "../components/Header";
 import DogLogin from "./images/dog-for-login.png";
@@ -118,23 +118,19 @@ function Login() {
         <Container fluid>
           <Row>
           <div className="col-md-5" style={{marginTop:"17%", marginLeft:"4%" , float:"left", opacity: "100%"}}>
-                <img className="login-text" src={LoginText}/>
+                <img className="login-text" alt={"Canine Cupid Login Header"} src={LoginText}/>
             </div>
             <div className="col-md-6" style={{float:"left", marginTop:"2%" , marginLeft: "3.5%" }}>
             <Col size="md-6">
-              <img className="login-image" src={DogLogin}/>
+              <img className="login-image" alt={"Golden Retriever Dog"} src={DogLogin}/>
               </Col>
               </div>
           </Row>
         </Container>
         <Modal className="login-modal body" show={loginIsOpen} onHide={hideModal}>
           <Modal.Header>
-            <Modal.Title> <h4 style={{ textAlign: "center" }}>Enter your pup's credentials</h4></Modal.Title>
-            <XButton 
-            onClick={hideModal}
-            >
-            </XButton>
-
+            <Modal.Title > <h4 style={{ textAlign: "center" }}>Enter your pup's credentials</h4></Modal.Title>
+              <button style={{ backgroundColor: "inherit" , textAlign: "center" , cursor: "pointer"  , whiteSpace: "nowrap" , border: "none", display: "inline-block", padding: "8px 16px", verticalAlign: "middle", overflow: "hidden", textDecoration: "none", color: "inherit"  }} onClick={hideModal}>X</button>
           </Modal.Header>
           <Modal.Body>
             <form>
@@ -182,7 +178,7 @@ function Login() {
           <Modal.Header>
             <Modal.Title>Sorry!</Modal.Title>
           </Modal.Header>
-          <Modal.Body>{isErrorMessage}</Modal.Body>
+          <Modal.Body><div style={{alignContent: "center"}}><h3>{isErrorMessage}</h3></div></Modal.Body>
           <Modal.Footer>
             <ModalButton
               height="40px"
@@ -194,7 +190,7 @@ function Login() {
               marginBottom=".3%"
               fontWeight="bold"
               backgroundColor="white"
-              onClick={hideModal}>Ok</ModalButton>
+              onClick={hideModal}>Okay</ModalButton>
           </Modal.Footer>
         </Modal>
         {/* ------------------------------------ */}

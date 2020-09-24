@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
-import { Input, Checkbox, TextArea, FormBtn } from "../components/Form";
+import { Input , TextArea, FormBtn } from "../components/Form";
 import Navbar from "../components/Navbar";
 import UserContext from "../utils/UserContext";
 import Modal from 'react-bootstrap/Modal';

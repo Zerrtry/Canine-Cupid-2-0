@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react"
 import { Row, Container } from "../components/Grid";
-import Card from "../components/Card";
+import CardTwo from "../components/CardTwo";
 import SwipeBtn from "../components/SwipeBtn";
 import ProfDetails from "../components/ProfDetails";
-import DistanceContainer from "../components/DistanceContainer";
 import Col from "../components/Col";
 import Navbar from "../components/Navbar";
 import API from "../utils/API";
@@ -12,55 +11,54 @@ import Moment from 'react-moment';
 import FlashMessage from "react-flash-message";
 
 let Matchnow = () => {
-    
+
     const { user, allUsersNames, newUserData, newUserName, getNewUserData, getNewUserName } = useContext(UserContext)
     console.log("newUserData", newUserData);
-
-    const [matchedNames, setMatchedName] = useState(user.matchesYes)
-    console.log("matchedNames",matchedNames);
-
     const [status, setStatus] = useState(false);
 
+    const [matchedNames, setMatchedName] = useState(user.matchesYes)
+    console.log("matchedNames", matchedNames);
+
     let readableDate = <Moment format="YYYY/MM/DD">{newUserData.date}</Moment>;
-    
+
     const rand = function (items) {
         return items[~~(items.length * Math.random())];
     };
 
     const filteredNames = function () {
-        const arr3 = allUsersNames.filter(e=>matchedNames.findIndex(i=>i === e) === -1);
+        const arr3 = allUsersNames.filter(e => matchedNames.findIndex(i => i === e) === -1);
         return arr3;
     };
 
     const newArray = filteredNames();
-    
+
     const next = rand(newArray);
-    console.log("next",next, newArray);
+    console.log("next", next, newArray);
 
     const getNextUser = function () {
         // const next1 = next;
-        
+
         // if (matchedNames.includes(next)){
         //     console.log ("UserAlreadyMatched")
 
         // } else 
-        if (next.localeCompare(newUserName)&&
-            next.localeCompare(user.userName)){
-            console.log ("getNextUser", next)
+        if (next.localeCompare(newUserName) &&
+            next.localeCompare(user.userName)) {
+            console.log("getNextUser", next)
             getNewUser(next)
             getNewUserName(next)
-            
-        } else if (next.localeCompare(newUserName)&&
-        next.localeCompare(user.userName)){
-            console.log ("getNextUser - SAME1")
+
+        } else if (next.localeCompare(newUserName) &&
+            next.localeCompare(user.userName)) {
+            console.log("getNextUser - SAME1")
             getNewUser(next)
             getNewUserName(next)
         } else {
-            console.log ("getNextUser - SAME2")
+            console.log("getNextUser - SAME2")
         };
     };
 
-    async function getNewUser (name){   
+    async function getNewUser(name) {
         await API.getUserByName(name)
         .then(response => {
             setStatus(false);
@@ -68,19 +66,20 @@ let Matchnow = () => {
         })
     }
 
-    async function setNewMatches (name1, name2){
+    async function setNewMatches(name1, name2) {
         await API.setUsersYesMatches(name1, name2)
-        .then((response) => {console.log(response)})
+            .then((response) => { console.log(response) })
     }
 
     const userForArr = newUserData.userName;
- 
+
     function handleYesSubmit() {
         console.log("Yes")
         // const data = matchedNames.push(newUserName);
         setStatus(true);
         setNewMatches(user.userName, newUserData.userName);
         setMatchedName(matchedNames => [...matchedNames, userForArr]);
+        setStatus(true);
         getNextUser();
     }
 
@@ -88,13 +87,12 @@ let Matchnow = () => {
         console.log("No")
         getNextUser()
     }
-
     return (
         <div>
-        <Navbar />
-        <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"3%" , fontFamily: "Georgia, serif"}}>
-        <h2 style={{ color:"white" , fontSize:"45px"}}>Get yo pup the lovin they deserve and match now!</h2>
-        </div>
+            <Navbar />
+            <div style={{ backgroundColor: "rgb(232, 86, 86)", textAlign: "center", width: "80%", height: "110px", paddingTop: "2%", borderRadius: "25px", marginLeft: "9%", marginBottom: "3%", fontFamily: "Georgia, serif" }}>
+                <h2 style={{ color: "white", fontSize: "45px" }}>Get yo pup the lovin they deserve and match now!</h2>
+            </div>
             <Container>
                 <Row>
                     <Col size="md-3">
@@ -106,11 +104,11 @@ let Matchnow = () => {
                         />
                     </Col>
                     <Col size="md-6">
-                    <Card petName={newUserData.petName} photoUrl={newUserData.photoUrl} message={"User Pic"}>
-                        <div style={{paddingTop: "3%", paddingLeft: "4%"}}>Pet name:  &nbsp;&nbsp;{newUserData.petName}</div> 
-                        <div style={{paddingTop: "3%", paddingLeft: "4%"}}>Breed:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.breed}</div> 
-                        <div style={{paddingTop: "3%" ,paddingLeft: "4%"}}>Age:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.age}</div>
-                        </Card>
+                        <CardTwo petName={newUserData.petName} img1={newUserData.petPhotoUrl} img2={newUserData.userPhotoUrl} message={"User Pic"} messageTwo={"Dog Pic"}>
+                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Pet name:  &nbsp;&nbsp;{newUserData.petName}</div>
+                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Breed:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.breed}</div>
+                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Age:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {newUserData.age}</div>
+                        </CardTwo>
                     </Col>
 
                     <Col size="md-3">
@@ -122,24 +120,24 @@ let Matchnow = () => {
                         />
                         {status && (
                             <FlashMessage duration={10000} >
-                               <strong style={{backgroundColor:"rgb(232, 86, 86)", fontSize:"25px", fontColor: "white", fontFamily: "Georgia, serif"}}>MATCHED!</strong>
+                               <strong style={{backgroundColor:"rgb(232, 86, 86)", fontSize:"25px", fontColor: "white", fontFamily: "Georgia, serif"}}><p style={{color:"green"}}>MATCHED!</p></strong>
                             </FlashMessage>
                         )}
     
                     </Col>
                 </Row>
-                </Container>
-                <Container fluid>
+            </Container>
+            <Container fluid>
                 <Row>
                     <Col size="md-10">
                         <div >
-                        <ProfDetails>
-                        <div>Username:&nbsp;{newUserData.userName} </div>
-                        <div style={{paddingTop: "3%"}}>Location:&nbsp;&nbsp;&nbsp;&nbsp;{newUserData.city}</div>
-                        <div style={{paddingTop: "3%" }}>Zip Code:&nbsp;&nbsp;&nbsp;{newUserData.zipCode}</div>
-                        <div style={{paddingTop: "3%" }}>Join Date:&nbsp;&nbsp;{readableDate}</div>
-                        <div style={{paddingTop: "3%"}}>About my pet:&nbsp;&nbsp;{newUserData.info}</div>
-                        </ProfDetails>
+                            <ProfDetails>
+                                <div>Username:&nbsp;{newUserData.userName} </div>
+                                <div style={{ paddingTop: "3%" }}>Location:&nbsp;&nbsp;&nbsp;&nbsp;{newUserData.city}</div>
+                                <div style={{ paddingTop: "3%" }}>Zip Code:&nbsp;&nbsp;&nbsp;{newUserData.zipCode}</div>
+                                <div style={{ paddingTop: "3%" }}>Join Date:&nbsp;&nbsp;{readableDate}</div>
+                                <div style={{ paddingTop: "3%" }}>About my pet:&nbsp;&nbsp;{newUserData.info}</div>
+                            </ProfDetails>
                         </div>
                     </Col>
                 </Row>
