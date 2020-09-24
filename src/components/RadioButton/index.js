@@ -19,7 +19,7 @@ return (
         // defaultChecked 
         value="true"
         // checked={props.defaultChecked}
-        defaultChecked={props.radioName === props.defaultChecked}
+        // defaultChecked={props.radioName === props.defaultChecked}
         onChange={props.onChange}
         />
 
@@ -31,7 +31,7 @@ return (
     //    defaultChecked 
         value="false"
         // checked={props.defaultChecked}
-        defaultChecked={!(props.radioName === props.defaultChecked)}
+        // defaultChecked={!(props.radioName === props.defaultChecked)}
         onChange={props.onChange}
         />
         </div>

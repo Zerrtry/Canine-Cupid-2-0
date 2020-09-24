@@ -58,7 +58,7 @@ function Login() {
     }
   };
 
-  async function getAllNames(sessionToken, arrYes) {
+  async function getAllNames(sessionToken, arrYes, arrNo) {
     console.log("getAllNames")
     await API.getAllUsers(sessionToken)
       .then((res) => {
@@ -71,17 +71,22 @@ function Login() {
         }
         const arr2 = arr1.filter(checkUserName)
 
-        // arrYes conteined users name mutched by Loged user, all those name should be exlused from arr2, result in data
-        const filteredNames = function () {
-          const arr3 = arr2.filter(e => arrYes.findIndex(i => i === e) === -1);
-          return arr3;
+        // arrYes conteined names of the users matched by Loged user, all those names should be exlused from arr2, result in data
+        const filteredNamesYes = function () {
+          const data = arr2.filter(e => arrYes.findIndex(i => i === e) === -1);
+          return data;
         };
+        const arr3 = filteredNamesYes();
 
-        const data = filteredNames();
+        // arrNo conteined names of the users matched by Loged user, all those names should be exlused from arr3, result in data
+        const filteredNamesNo = function () {
+          const data = arr3.filter(e => arrNo.findIndex(i => i === e) === -1);
+          return data;
+        };
+        const arr4 = filteredNamesNo();
 
-        getAllUsersNames(data)
-      }
-      )
+        getAllUsersNames(arr4)
+      })
   }
 
   function handleAuthenticatedResponse(res) {
@@ -94,7 +99,7 @@ function Login() {
     } else {
       console.log("res.data", res.data);
       getData(res.data);
-      getAllNames(res.data.sessionToken, res.data.matchesYes);
+      getAllNames(res.data.sessionToken, res.data.matchesYes, res.data.matchesNo);
       // getAllUsersID(allID);
       // console.log("allID",allID);
       history.push("/profile");

@@ -219,7 +219,7 @@ function EditProfile() {
                   <RadioButton
                     radioLabel = "Vaccinated:"
                     radioName = "vaccinated"
-                    defaultChecked={checkVaccinated}
+                    // defaultChecked={checkVaccinated}
                     // checked={checkVaccinated}
                     // {this.props.editable ? editable={this.props.editableOpts} : null}
                     // {{checkVaccinated} ? defaultChecked : null}
@@ -228,7 +228,7 @@ function EditProfile() {
                   <RadioButton
                     radioLabel = "Trained:"
                     radioName = "trained"
-                    defaultChecked={checkTrained}
+                    // defaultChecked={checkTrained}
                     // checked={checkTrained}
                     onChange={(event)=>setCheckTrained(event.target.value)}
                   />
