@@ -44,6 +44,24 @@ let Matchnow = () => {
 
     let readableDate = <Moment format="YYYY/MM/DD">{nextUserData.date}</Moment>;
     
+    let vaccinated = "";
+    let trained = "";
+
+    // if ('park' in user && user.park === "on")
+    if (nextUserData.vaccinated === true) {
+        vaccinated = "Yes"
+    } else if (nextUserData.vaccinated === false) {
+        vaccinated = "No"
+    }
+
+    if (nextUserData.trained === true) {
+        trained = "Yes"
+    } else if (nextUserData.trained === false) {
+        trained = "No"
+    }
+
+
+
     //picker of random item from an array
     // const rand = function (items) {
     //     return items[~~(items.length * Math.random())];
@@ -182,9 +200,15 @@ let Matchnow = () => {
                     </Col>
                     <Col size="md-6">
                         <CardTwo petName={nextUserData.petName} img1={nextUserData.petPhotoUrl} img2={nextUserData.userPhotoUrl} message={"User Pic"} messageTwo={"Dog Pic"}>
-                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Pet name:  &nbsp;&nbsp;{nextUserData.petName}</div>
-                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Breed:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nextUserData.breed}</div>
-                            <div style={{ paddingTop: "3%", paddingLeft: "4%" }}>Age:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nextUserData.age}</div>
+                            <div style={{float:"left" ,width:"50%"}}>
+                            <div style={{ paddingTop: "10%", paddingLeft: "4%" }}>Pet name:  &nbsp;&nbsp;{nextUserData.petName}</div>
+                            <div style={{ paddingTop: "12%", paddingLeft: "4%" }}>Breed:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nextUserData.breed}</div>
+                            <div style={{ paddingTop: "12%", paddingLeft: "4%" }}>Age:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nextUserData.age}</div>
+                            </div>
+                            <div style={{float: "left" ,width:"50%" }}>
+                            <div style={{marginTop:"12%", marginLeft: "5%" , fontSize:"25px"  }}>Vaccinated: {vaccinated}</div>
+                            <div style={{ marginTop: "12%", marginLeft: "5%" , fontSize:"25px" }}>Trained: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{trained}</div>
+                            </div>
                         </CardTwo>
                     </Col>
 
