@@ -23,10 +23,13 @@ function App() {
   const [newUserData, setNewUserData] = useState({});
   console.log ("newUserData", newUserData);
   const [newUserName, setNewUserName] = useState("");
-  console.log ("newUserName", newUserName)
+  console.log ("newUserName", newUserName);
   const [allUsersNames, setAllUsersNames] = useState([]);
   console.log ("allUsersNames", allUsersNames);
   const [userForMatchesPage , setUserForMatchesPage] = useState([])
+  console.log("userForMatchesPage" , userForMatchesPage);
+  const [currentUserIp , setCurrentUserIp] = useState("")
+  console.log("currentUserIp" , currentUserIp);
 
   useEffect(
     ()=>{const raw = localStorage.getItem('user')
@@ -36,6 +39,22 @@ function App() {
   useEffect(
     ()=>{localStorage.setItem('user', JSON.stringify(user));
   }, [user])
+
+  useEffect( () => {
+    // async function fetchIp() {
+       {fetch('https://api.ipify.org?format=jsonp?callback=?', {
+        method: 'GET',
+        headers: {},
+       })
+      .then(res => {
+        return res.text()
+      }).then(ip => { setCurrentUserIp(ip)
+        console.log('ip', ip);
+        return ip;
+      })
+    }
+  },[]
+  )
 
   // useEffect (()=>{
   //   const raw = localStorage.getItem('user')|| {}
@@ -61,7 +80,9 @@ function App() {
   const getAllMatchesForMatchesPage = (data) => {
     setUserForMatchesPage (userForMatchesPage=>{return userForMatchesPage = data})
   }
-
+  const setCurrentUserIpAddressForContext = (data) => {
+    setCurrentUserIp(currentUserIp=>{return currentUserIp = data})
+  }
   return (
     <UserProvider value = {{
       user,
@@ -69,12 +90,14 @@ function App() {
       newUserName,
       allUsersNames,
       userForMatchesPage,
+      currentUserIp,
 
       getData,
       getNewUserData,
       getNewUserName,
       getAllUsersNames,
-      getAllMatchesForMatchesPage
+      getAllMatchesForMatchesPage,
+      setCurrentUserIpAddressForContext
     }}>
       <Router>
       {/* <Navbar sticky="top"/> */}

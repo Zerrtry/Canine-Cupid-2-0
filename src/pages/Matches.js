@@ -50,14 +50,16 @@ useEffect(()=>{
                 message={" sent you a message, reply now!"}
                 image="https://cdn.iconscout.com/icon/free/png-256/user-avatar-contact-portfolio-personal-portrait-profile-6-5623.png"
                 {...MessageButton}
-              />
+              >
+                      <Map height="200px" width="200px"/>
+                </MatchCards>
             </Col>
       </Row>
-            <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"2%" , marginTop:"5%" , fontFamily: "Georgia, serif"}}>
+            {/* <div style={{ backgroundColor:"rgb(232, 86, 86)", textAlign: "center" , width:"80%" ,  height:"110px" , paddingTop:"2%"  , borderRadius : "25px" , marginLeft:"9%" , marginBottom:"2%" , marginTop:"5%" , fontFamily: "Georgia, serif"}}>
             <h3 style={{ color:"white" , fontSize:"45px"}}>Meet up at a pet-friendly park near you</h3>
-            {/* <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div> */}
-            </div>
-      <Map />
+            <div className="line" style={{ border: "solid black 2px", margin: "4% 10% 5% 10%" }}></div> ////// leave this commented out
+            </div>  */}
+      {/* <Map/> */}
     </Container>
     </div>
     ); 

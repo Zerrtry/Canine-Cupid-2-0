@@ -3,12 +3,13 @@
 	/* border: rgb(232, 86, 86) dashed 10px; */
 	height: 100vh;
 	margin: auto;
-	/* margin-top: 7.5%; */
 	bottom: 0;
 	left: 0;
 	right: 0;
-    max-height: 482px;
-	max-width: 650px;
+	max-height: 360px;
+    /* max-height: 482px; */
+	max-width: 400px;
+	/* max-width: 650px; */
 	z-index: 1
  }
  .border-hello{
