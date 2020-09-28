@@ -193,7 +193,7 @@ let Matchnow = () => {
                             onClick={handleNoSubmit}
                         />
                          {status2 && (
-                            <FlashMessage duration={20000} >
+                            <FlashMessage duration={10000} >
                                <strong style={{backgroundColor:"rgb(232, 86, 86)", fontSize:"25px", fontColor: "white", fontFamily: "Georgia, serif"}}>REJECTED!</strong>
                             </FlashMessage>
                         )}
@@ -220,7 +220,7 @@ let Matchnow = () => {
                             onClick={handleYesSubmit}
                         />
                         {status && (
-                            <FlashMessage duration={20000} >
+                            <FlashMessage duration={500000} >
                                <strong style={{backgroundColor:"rgb(232, 86, 86)", fontSize:"25px", fontColor: "white", fontFamily: "Georgia, serif"}}>MATCHED!</strong>
                             </FlashMessage>
                         )}
