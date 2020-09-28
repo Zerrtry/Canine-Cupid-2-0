@@ -39,6 +39,9 @@ function Login() {
   const showLoginModal = () => {
     setLoginIsOpen(true);
   }
+  const hideLoginModal = () => {
+    setLoginIsOpen(false)
+  }
   ///////////////////////////////////
 
   function handleInputChange(event) {
@@ -132,10 +135,10 @@ function Login() {
               </div>
           </Row>
         </Container>
-        <Modal className="login-modal body" show={loginIsOpen} onHide={hideModal}>
+        <Modal className="login-modal body" show={loginIsOpen} onHide={hideLoginModal}>
           <Modal.Header>
             <Modal.Title > <h4 style={{ textAlign: "center" }}>Enter your pup's credentials</h4></Modal.Title>
-              <button style={{ backgroundColor: "inherit" , textAlign: "center" , cursor: "pointer"  , whiteSpace: "nowrap" , border: "none", display: "inline-block", padding: "8px 16px", verticalAlign: "middle", overflow: "hidden", textDecoration: "none", color: "inherit"  }} onClick={hideModal}>X</button>
+            <button onClick={hideLoginModal} style={{ backgroundColor: "inherit" , textAlign: "center" , cursor: "pointer"  , whiteSpace: "nowrap" , border: "none", display: "inline-block", padding: "8px 16px", verticalAlign: "middle", overflow: "hidden", textDecoration: "none", color: "inherit"  }}>X</button>
           </Modal.Header>
           <Modal.Body>
             <form>
