@@ -5,7 +5,6 @@ import { MyProfileButton, MatchNowButton, MatchesButton, LogOutButton, AboutUsBu
 
 
 export function Navbar(props) {
-  console.log(props.color)
   return (
     <div className="navbar">
       <MyProfileButton />

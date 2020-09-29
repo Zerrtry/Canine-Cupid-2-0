@@ -5,7 +5,7 @@ import "./style.css";
 
 function ProfDetails(props) {
     return (
-        <div className="container" style={{ marginTop: "6%" }}>
+        <div className="container theCont" style={{ marginTop: "6%" }}>
             <Col size="md-12">
                 <div className="profDetails">
                     <div className="content">

@@ -114,19 +114,17 @@ function Login() {
     history.push("/signup");
   };
   return (
-    <div className="login-page-content">
+    <div className="login-content container-fixed">
           <Header />
       <NavbarNolinks>
       <LoginButton
         onClick={showLoginModal} />
       </NavbarNolinks>
-      <div className="body">
-        {/* <NavbarLogin onClick={showLoginModal} /> */}
-        {/* <!-- Optional theme --> */}
+      <div className="body-content">
         <Container fluid>
           <Row>
           <div className="col-md-5" style={{marginTop:"17%", marginLeft:"4%" , float:"left", opacity: "100%"}}>
-                <img className="login-text" alt={"Canine Cupid Login Header"} src={LoginText}/>
+                <img style={{height:"60%" , width:"100%"}} className="login-text" alt={"Canine Cupid Login Header"} src={LoginText}/>
             </div>
             <div className="col-md-6" style={{float:"left", marginTop:"2%" , marginLeft: "3.5%" }}>
             <Col size="md-6">

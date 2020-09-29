@@ -55,15 +55,23 @@
     background-color:rgb(232, 86, 86);
     background-blend-mode: hard-light;
   }
-  
+  .body-content{
+      height: 100%;
+      width: 100%;
+  }
 .login-content {
-  background-color: rgb(255, 255, 255);
-  padding: 15px;
-  margin-left: -15px;
-  border-radius: 0 10px 10px 0;
+    height: 1000px;
+    width:100%;
+    background-color:rgb(232, 86, 86) ;
+    overflow: hidden;
+  /* padding: 15px; */
+  /* margin-left: -15px; */
+  /* border-radius: 0 10px 10px 0; */
 }
 .login-page-content{
     background-color:rgb(232, 86, 86) ;
+    height: 100%;
+    width: 100%;
 }
 .aboutUs-page-content{
     background-color:rgb(232, 86, 86) ;

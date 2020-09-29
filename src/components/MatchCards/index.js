@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Container, Row } from "../Grid";
+import {Row } from "../Grid";
 import Col from "../Col";
 import Modal from 'react-bootstrap/Modal';
 import Map from "../map";
@@ -41,7 +41,7 @@ export default function MatchCards(props) {
         async function showuserDetails(id) {
             setIsOpen(true);
             console.log(id)
-            const index = userForMatchesPage.findIndex(p => p.userData.userName == id)
+            const index = userForMatchesPage.findIndex(p => p.userData.userName === id)
             setThisUser(userForMatchesPage[index].userData)
 
             // console.log(props.arrayData.map((item, userName , key) => (
@@ -51,7 +51,7 @@ export default function MatchCards(props) {
             // )) , "hello this is my console log")
         }
         return (
-            <div className="Container fixed">
+            <div className="container fluid">
                 <Modal id={thisUser.userName} className="userModalContent" show={isOpen} onHide={hideModal}>
                     <Modal.Header>
                         <Modal.Title> <h2 style={{ alignContent: "center" }}>{thisUser.userName}'s Profile</h2></Modal.Title>
@@ -76,39 +76,34 @@ export default function MatchCards(props) {
                         </Modal.Body>
                     </div>
                 </Modal>
-
-
                 {props.arrayData.map((item, myKey) => (
                     <div key={myKey}>
                         {console.log(myKey)}
                         {/* {console.log(item.userData.userName)} */}
                         <Row-fixed>
+                        <div style={{display:"flex", width:"100%"}}>
                             <div className="mainCont ">
-                                <div className="image">
-                                    <Col size="md-3" className="image-col">
+                                    <Col size="md-2" className="image-col">
+                                    <div className="image">
                                         <div>
                                             <img className="img" src={item.userData.petPhotoUrl} alt={item.userData.userName}></img>
                                             <div>
                                                 <h6><button id={item.userData.userName} className="userNameBtn" onClick={(e) => (showuserDetails(e.target.id))}>{item.userData.userName}</button></h6>
                                             </div>
                                         </div>
-                                    </Col>
-                                </div>
-                                <div className="messages">
-                                    <Col size="md-5 messages">
-                                        <div>
-                                            <p className="text">{item.userData.userName}{props.message}</p>
                                         </div>
                                     </Col>
-                                </div>
-                                <div className="messageBtn">
-                                    <Col size="md-3 messageBtn">
-
-                                        <div className="button-container">
-                                            <a style={{ borderTopRightRadius: "15px", borderBottomRightRadius: "15px", borderTopLeftRadius: "0px", borderBottomLeftRadius: "0px" }} type="submit" className="btn button-message" href={`mailto:doggie@gmail.com?subject=RW:`}><p className="btnText" style={{ fontFamily: "Arial", fontWeight: "bolder" }}>Message Now</p></a>
+                                    <Col size="md-7">
+                                    <div className="messages">
+                                        <p className="text">{item.userData.userName}{props.message}</p>
                                         </div>
                                     </Col>
-                                </div>
+                                    <Col size="md-3 ">
+                                    <div className="messageBtn">
+                                            <a style={{ borderTopRightRadius: "15px", borderBottomRightRadius: "15px", borderTopLeftRadius: "0px", borderBottomLeftRadius: "0px" }} type="submit" className="btn" href={item.userData.email}><p className="btnText" style={{ fontFamily: "Arial", fontWeight: "bolder" }}>Message Now</p></a>
+                                        </div>
+                                    </Col>
+                            </div>
                             </div>
                         </Row-fixed>
                     </div>

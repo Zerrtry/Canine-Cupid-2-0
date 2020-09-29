@@ -147,6 +147,7 @@ let Matchnow = () => {
         // const arr2 = arr1.filter(checkUserName)
         const arr2 = arr1.shift()
         console.log ("cutedArrOfAllUsersNames", arr1, nextUserData.userName);
+        console.log(arr2)
         setAllNames(arr1)
     }
 

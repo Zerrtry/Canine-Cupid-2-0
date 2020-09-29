@@ -43,12 +43,13 @@ let Profile = (props) => {
             <Navbar
             color="white"
             />
-            <div style={{ backgroundColor: "rgb(232, 86, 86)", textAlign: "center", width: "80%", height: "110px", paddingTop: "2%", borderRadius: "25px", marginLeft: "9%", marginBottom: "6.5%", fontFamily: "Georgia, serif" }}>
+            <div className="container" style={{ backgroundColor: "rgb(232, 86, 86)", textAlign: "center", width: "80%", height: "100%", paddingTop: "2%", borderRadius: "25px", marginLeft: "9%", marginBottom: "6.5%", fontFamily: "Georgia, serif" }}>
                 <h2 style={{ color: "white", fontSize: "45px" }}>Welcome to your profile {user.userName}!</h2>
             </div>
             <Container fluid>
                 <Row-fluid>
-                    <Col size="md-12">
+                    <div style={{display:"flex" ,margin:"auto"}}>
+                    <Col size="md-6">
                         <Card petName={user.petName} petPhotoUrl={user.petPhotoUrl} messageTwo={"Dog Pic"} message = {"My Pic"} img1 = {user.petPhotoUrl} img2={user.userPhotoUrl} >
                             <div style={{float:"left" , width:"50%" }}>
                             <div style={{marginTop:"5%", marginLeft: "5%" , fontSize:"25px" }}>Pet name: &nbsp;&nbsp;{user.petName}</div>
@@ -61,9 +62,10 @@ let Profile = (props) => {
                             </div>
                         </Card>
                     </Col>
-                </Row-fluid>
-                <Row>
-                    <Col size="md-11">
+                    {/* </Row-fixed>
+                    <Row-fixed> */}
+                    <Col size="md-5">
+                        <div style={{width:"100%", height:"100%" , overflow:"none"}}>
                         <ProfDetails callbackStuff={setClicked} marginTop="5%" >
                             <div style={{ paddingTop: "2%" , marginLeft: "2.5%" }}>User Name : {user.userName} </div>
                             <div style={{ paddingTop: "4%" , marginLeft: "2.5%" }} >Location: &nbsp;&nbsp;&nbsp;&nbsp;{user.city}</div>
@@ -74,8 +76,10 @@ let Profile = (props) => {
                             {/* <div style={{paddingTop: "3%"}}>About my pet: &nbsp;{interests}</div> */}
                             <EditProfileButton />
                         </ProfDetails>
+                        </div>
                     </Col>
-                </Row>
+                    </div>
+                </Row-fluid>
                 <Col size="md-12">
                     <div style={{ backgroundColor: "rgb(232, 86, 86)", textAlign: "center", width: "80%", height: "110px", paddingTop: "2%", borderRadius: "25px", marginLeft: "9%", marginTop:"10%" , fontFamily: "Georgia, serif" }}>
                         <h2 style={{ color: "white", fontSize: "45px" }}>Pet-friendly parks near you</h2>

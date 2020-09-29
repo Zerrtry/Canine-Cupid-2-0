@@ -80,7 +80,7 @@ function App() {
   const getAllMatchesForMatchesPage = (data) => {
     setUserForMatchesPage (userForMatchesPage=>{return userForMatchesPage = data})
   }
-  const setCurrentUserIpAddressForContext = (data) => {
+  const getCurrentUserIpAddressForContext = (data) => {
     setCurrentUserIp(currentUserIp=>{return currentUserIp = data})
   }
   return (
@@ -97,7 +97,7 @@ function App() {
       getNewUserName,
       getAllUsersNames,
       getAllMatchesForMatchesPage,
-      setCurrentUserIpAddressForContext
+      getCurrentUserIpAddressForContext
     }}>
       <Router>
       {/* <Navbar sticky="top"/> */}

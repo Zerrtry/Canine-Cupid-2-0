@@ -1,12 +1,12 @@
 .mainCont{
     height: 76px;
-    margin-left: 2%;
-    width:95%;
-    border: 0 10px 0 0;
+    /* margin-left: 2%; */
+    width:inherit;
+    /* border: 0 10px 0 0; */
     border: solid black 3px;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: nowrap;
+    overflow: inherit;
+    display: inline-flex;
+    /* flex-wrap: nowrap; */
     flex-direction: row;
     border-radius:17.5px;
     background-color: white;
@@ -30,40 +30,41 @@
 
 .image{
     height: 100%;
-    width: 10%;
+    width: 37%;
     float: left;
-    position: absolute;
-    margin-top:.2%;
-    padding-left: .5%;
-    
+    /* position: absolute; */
+    padding-top:4%;
+    padding-left: 4%;
 }
 
-.image-col{
+/* .image-col{
     height: 19%;
-}
+} */
 .img{
     padding: 3%;
-    height: 42px;
-    width: 40px;
+    height: 65%;
+    width: 58%;
     background-color: blue;
     border-radius: 50px;
 }
 
 .messages{
     height: 100%;
-    width: 52%;
-    float: left;
-    /* position: absolute;  */
-    margin-left: 28%; 
+    width: 100%;
+    /* float: left; */
+    /* position: relative;  */
+    margin-left: inherit; 
     text-align: center;
     white-space: nowrap;
     color:black;
+    margin-top: 3%;
 }
 
 .text{
-    padding-top: 8%;
+    /* padding-top: 8%; */
     font-size: 22px;
     font-weight: 450;
+    /* float: left; */
 }
 .userNameBtn{
     border: none;
@@ -71,26 +72,20 @@
 }
 
 .messageBtn{
-    height: 100%;
-    width: 30%;
-    float: left;
-    position: absolute;
-    text-align: center;
-    margin-left: 73%;
-}
-
-.button-message{
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 202px;
-    float: left;
-    position: absolute;
+    /* height: 100%; */
+    width: 100%;
+    float: right;
+    position: relative;
+    /* white-space: nowrap; */
+    margin-left: inherit;
+    /* text-align: center; */
+    /* margin-left: 29.5%; */
 }
 
 .btnText{
-    margin-top:7.5%;
+    margin-top:inherit;
     font-family: Arial;
     /* background-color: black; */
-    width: 80%;
+    /* width: 80%; */
     font-size: 20px;
 }

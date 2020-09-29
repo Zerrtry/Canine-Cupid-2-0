@@ -6,6 +6,7 @@ function Header(props) {
   return (
     <div className="row">
     <header className="header">
+      <img className="heading-image" src={require("./images//heading-image.png")} alt="canine cupid"></img>
       {/* <div className="picDiv">
         <img className="pic" alt="cupidog" src={require("./images/dog-cupid.png")}></img>
       </div> */}

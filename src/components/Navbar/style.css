@@ -47,7 +47,9 @@ align-content: space-between;
   background-color: white;
   height: 50px;
   margin-top: 1%;
+  width: 100%;
   }
+  
   .navbar-signup {
     overflow: hidden;
     height: 50px;
