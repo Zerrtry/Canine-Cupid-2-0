@@ -7,6 +7,11 @@ Coronavirus has impacted our world in many ways, one of which being the recent s
 ## Views
 ![](/public/canine-cupid-2-0.gif)
 
+## Contents
+* [Technologies used](#Technologies used)
+* [Contribution](#Contribution)
+* [Deployment](#Deployment)
+
 # Canine-Cupid-2-0-Solutions
 ![Github Badge](https://img.shields.io/github/languages/top/zerrtry/Canine-Cupid-2-0-Front-End)
 ![Github Badge](https://img.shields.io/github/languages/count/zerrtry/Canine-Cupid-2-0-Front-End?color=yellow)
@@ -14,7 +19,7 @@ Coronavirus has impacted our world in many ways, one of which being the recent s
 ## Technologies used
 (Frontend) - React, Javascript, Jquery, AXIOS, Mapbox-cli (Rest API), Jest, Bcrypt, Github, AWS
 
-## The Team
+## Contribution
 Canine Cupid Ver. 2 developed By: Dmitrii Zverev, Logan McCann, Isha Bali.
 
 Breakdown of tasks and role (Frontend):
@@ -25,8 +30,9 @@ Breakdown of tasks and role (Frontend):
 
 Note:'Canine Cupid' application Ver. 2.0 has enhancements over the version 1. Version 2 has been developed by 3 developers -  Dmitrii Zverev, Logan McCann and Isha Bali. Ver 1 was earlier submitted on September 15th 2020 during Northwestern FULL STACK FLEX coding bootcamp.  Version 1 was developed by a Team of 5 developers - Isha Bali, Dmitrii Zverev, Logan McCann, Carlos Reyes and Julianne Bainter.
 
-## Link to Frontend Github Repository: 
+## Deployment
+Link to Frontend Github Repository: 
 https://github.com/Canine-Cupid-2-0/Front-End
 
-## Presentation: 
+Presentation: 
 https://docs.google.com/presentation/d/1SxGIsXUXfcyI9qR1ks2D07JHIUExOqwXSbh9UefcxDM/edit#slide=id.p
