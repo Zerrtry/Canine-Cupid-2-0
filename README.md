@@ -1,5 +1,10 @@
 # Front-End - Canine-Cupid-2-0
-Quick Link to Deployed App: http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com
+Quick Link to Deployed App [here!] (http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com)
+
+## Contents
+* [Technologies](#Technologies)
+* [Contribution](#Contribution)
+* [Deployment](#Deployment)
 
 ## Concept: 
 Coronavirus has impacted our world in many ways, one of which being the recent skyrocket in animal adoption rates. Shelters everywhere have been cleared by people looking for four-legged friends, and while staying home with them 24/7 was initially great, our pups are getting just as stir-crazy as we are. That’s where Canine Cupid comes in. Canine Cupid is the dog-matching app you and your pup have been waiting for. Just make an account outlining your dog’s likes, dislikes, and personality traits to match them with a friend that is just as special as they are. Grab your mask, your pup’s leash and head out for a (socially-distanced) playdate!
@@ -7,16 +12,11 @@ Coronavirus has impacted our world in many ways, one of which being the recent s
 ## Views
 ![](/public/canine-cupid-2-0.gif)
 
-## Contents
-* [Technologies used](#Technologies used)
-* [Contribution](#Contribution)
-* [Deployment](#Deployment)
-
 # Canine-Cupid-2-0-Solutions
 ![Github Badge](https://img.shields.io/github/languages/top/zerrtry/Canine-Cupid-2-0-Front-End)
 ![Github Badge](https://img.shields.io/github/languages/count/zerrtry/Canine-Cupid-2-0-Front-End?color=yellow)
 
-## Technologies used
+## Technologies
 (Frontend) - React, Javascript, Jquery, AXIOS, Mapbox-cli (Rest API), Jest, Bcrypt, Github, AWS
 
 ## Contribution
