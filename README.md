@@ -1,5 +1,5 @@
 # Front-End - Canine-Cupid-2-0
-Quick Link to Deployed App [here!](http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com)
+See the website [here!](http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com)
 
 # Canine-Cupid-2-0-Solutions
 ![Github Badge](https://img.shields.io/github/languages/top/zerrtry/Canine-Cupid-2-0-Front-End)
