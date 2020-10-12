@@ -1,8 +1,7 @@
 # Front-End - Canine-Cupid-2-0
 
-Quick Link to Deployed App: http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com/login
+Quick Link to Deployed App: http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com
 
-Quick link for Frontend - http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com/login
 Link to Frontend Github Repository: https://github.com/Canine-Cupid-2-0/Front-End
 
 Presentation: https://docs.google.com/presentation/d/1SxGIsXUXfcyI9qR1ks2D07JHIUExOqwXSbh9UefcxDM/edit#slide=id.p
