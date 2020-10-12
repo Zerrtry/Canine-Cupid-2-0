@@ -1,6 +1,10 @@
 # Front-End - Canine-Cupid-2-0
 Quick Link to Deployed App [here!] (http://canine-cupid-2-0.s3-website.us-east-2.amazonaws.com)
 
+# Canine-Cupid-2-0-Solutions
+![Github Badge](https://img.shields.io/github/languages/top/zerrtry/Canine-Cupid-2-0-Front-End)
+![Github Badge](https://img.shields.io/github/languages/count/zerrtry/Canine-Cupid-2-0-Front-End?color=yellow)
+
 ## Contents
 * [Technologies](#Technologies)
 * [Contribution](#Contribution)
@@ -11,10 +15,6 @@ Coronavirus has impacted our world in many ways, one of which being the recent s
 
 ## Views
 ![](/public/canine-cupid-2-0.gif)
-
-# Canine-Cupid-2-0-Solutions
-![Github Badge](https://img.shields.io/github/languages/top/zerrtry/Canine-Cupid-2-0-Front-End)
-![Github Badge](https://img.shields.io/github/languages/count/zerrtry/Canine-Cupid-2-0-Front-End?color=yellow)
 
 ## Technologies
 (Frontend) - React, Javascript, Jquery, AXIOS, Mapbox-cli (Rest API), Jest, Bcrypt, Github, AWS
