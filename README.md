@@ -34,7 +34,7 @@ Note:'Canine Cupid' application Ver. 2.0 has enhancements over the version 1. Ve
 ## Deployment
 
 * Github Repositories 
-front-end: https://github.com/Canine-Cupid-2-0/Front-End
+front-end: https://github.com/Zerrtry/Canine-Cupid-2-0
 back-end: https://github.com/Zerrtry/Canine-Cupid-2-0-Back-End
 
 * Presentation 
