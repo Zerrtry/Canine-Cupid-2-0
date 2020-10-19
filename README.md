@@ -31,8 +31,9 @@ Breakdown of tasks and role (Frontend):
 Note:'Canine Cupid' application Ver. 2.0 has enhancements over the version 1. Version 2 has been developed by 3 developers -  Dmitrii Zverev, Logan McCann and Isha Bali. Ver 1 was earlier submitted on September 15th 2020 during Northwestern FULL STACK FLEX coding bootcamp.  Version 1 was developed by a Team of 5 developers - Isha Bali, Dmitrii Zverev, Logan McCann, Carlos Reyes and Julianne Bainter.
 
 ## Deployment
-Link to Frontend Github Repository: 
-https://github.com/Canine-Cupid-2-0/Front-End
+Link to Frontend Github Repositorys 
+front-end: https://github.com/Canine-Cupid-2-0/Front-End
+back-end: https://github.com/Zerrtry/Canine-Cupid-2-0-Back-End
 
 Presentation: 
 https://docs.google.com/presentation/d/1SxGIsXUXfcyI9qR1ks2D07JHIUExOqwXSbh9UefcxDM/edit#slide=id.p
