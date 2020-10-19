@@ -33,6 +33,8 @@ Breakdown of tasks and role:
 
 Note:'Canine Cupid' application Ver. 2.0 has enhancements over the version 1. Version 2 has been developed by 3 developers -  Dmitrii Zverev, Logan McCann and Isha Bali. Ver 1 was earlier submitted on September 15th 2020 during Northwestern FULL STACK FLEX coding bootcamp.  Version 1 was developed by a Team of 5 developers - Isha Bali, Dmitrii Zverev, Logan McCann, Carlos Reyes and Julianne Bainter.
 
+This repository is used for learning purposes. Please refrain from contributions or forking without explicit permission.
+
 ## Deployment
 
 * Github Repositories
